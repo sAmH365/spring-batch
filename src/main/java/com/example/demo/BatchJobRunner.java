@@ -16,7 +16,7 @@ public class BatchJobRunner {
   private final JobLauncher jobLauncher;
   private final Job jobName;
 
-  @PostConstruct
+//  @PostConstruct
   public void runJob() {
     try {
       JobParameters jobParameters = new JobParametersBuilder()

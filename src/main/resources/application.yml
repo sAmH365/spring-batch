@@ -28,5 +28,22 @@ spring:
     jdbc:
       initialize-schema: always
     job:
-      enabled: true
-      name: jobName
+      enabled: false
+#      name: jobName
+---
+spring:
+  config:
+    activate:
+      on-profile: mysql-udada
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3322/springbatch?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: pass
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  batch:
+    jdbc:
+      initialize-schema: always
+    job:
+      enabled: false
+#      name: job
